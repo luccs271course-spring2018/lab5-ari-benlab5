@@ -11,11 +11,12 @@ public class LinkedStack<E> implements IStack<E> {
 
   private int size = 0;
 
-  // TODO why don't we need an explicit constructor?
+  // DONE why don't we need an explicit constructor?
+  // An explicit constructor is not needed in this class because the ADT "LinkedList" has been implemented
 
   @Override
   public E push(final E obj) {
-    // TODO
+    // DONE
     Node<E> temp = top;
     top = new Node(obj);
     // top.obj = obj;
@@ -27,7 +28,7 @@ public class LinkedStack<E> implements IStack<E> {
 
   @Override
   public E peek() {
-    // TODO
+    // DONE
     if (isEmpty()) {
       throw new NoSuchElementException();
     } else {
@@ -38,7 +39,7 @@ public class LinkedStack<E> implements IStack<E> {
 
   @Override
   public E pop() {
-    // TODO
+    // DONE
     if (isEmpty()) {
       throw new NoSuchElementException();
     } else {
@@ -53,7 +54,7 @@ public class LinkedStack<E> implements IStack<E> {
 
   @Override
   public boolean isEmpty() {
-    // TODO
+    // DONE
     if (top != null) {
       return false;
     }
@@ -62,8 +63,8 @@ public class LinkedStack<E> implements IStack<E> {
 
   @Override
   public List<E> asList() {
-    // TODO implement using an ArrayList preallocated with the right size
-    // TODO add any instance variable(s) required to support this
+    // DONE implement using an ArrayList preallocated with the right size
+    // DONE add any instance variable(s) required to support this
     final ArrayList<E> list = new ArrayList<>(size);
     Node<E> curr = top;
     while (curr != null) {
