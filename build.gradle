@@ -36,3 +36,7 @@ tasks.withType(JavaCompile) {
 tasks.withType(JavaExec) {
     jvmArgs << "-enableassertions"
 }
+
+googleJavaFormat {
+toolVersion = '1.4'
+}

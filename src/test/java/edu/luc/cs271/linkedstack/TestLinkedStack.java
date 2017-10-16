@@ -2,45 +2,44 @@ package edu.luc.cs271.linkedstack;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.NoSuchElementException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.NoSuchElementException;
-
 public class TestLinkedStack {
 
-	private IStack<String> fixture;
-	
-	@Before
-	public void setUp() {
-		fixture = new LinkedStack<>();
-	}
+  private IStack<String> fixture;
 
-	@After
-	public void tearDown() {
-		fixture = null;
-	}
+  @Before
+  public void setUp() {
+    fixture = new LinkedStack<>();
+  }
 
-	@Test
-	public void testInitial() {
-		assertTrue(fixture.isEmpty());
-		try {
-		  fixture.pop();
-		  fail("java.util.NoSuchElementException expected");
+  @After
+  public void tearDown() {
+    fixture = null;
+  }
+
+  @Test
+  public void testInitial() {
+    assertTrue(fixture.isEmpty());
+    try {
+      fixture.pop();
+      fail("java.util.NoSuchElementException expected");
     } catch (final NoSuchElementException ex) {
-		  // exception occurred => all good
+      // exception occurred => all good
     }
-	}
+  }
 
-	@Test
+  @Test
   public void testAfterPush() {
-	  final String value = "hello";
-	  fixture.push(value);
-	  assertFalse(fixture.isEmpty());
-	  assertEquals(value, fixture.peek());
+    final String value = "hello";
+    fixture.push(value);
+    assertFalse(fixture.isEmpty());
+    assertEquals(value, fixture.peek());
   }
 
   @Test
