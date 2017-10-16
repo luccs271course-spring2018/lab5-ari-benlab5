@@ -13,9 +13,18 @@ public class LinkedStack<E> implements IStack<E> {
 
   @Override
   public E push(final E obj) {
-    // TODO
-    return null;
+    // DONE
+    if(top == null){
+      top = new Node<E>(obj);
+    }
+    else {
+      Node<E> temp = new Node(top.data, top.next);
+      top = new Node(obj);
+      top.next = new Node(temp.data, temp.next);
+    }
+    return obj;
   }
+    
 
   @Override
   public E peek() {
