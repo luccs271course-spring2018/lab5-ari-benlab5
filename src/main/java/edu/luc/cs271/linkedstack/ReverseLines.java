@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class ReverseLines {
 
   public static void main(String[] args) {
+
     // Done read successive input lines until EOF, then print out in reverse order
 
     LinkedStack<String> stack = new LinkedStack<String>();
@@ -22,5 +23,7 @@ public class ReverseLines {
     }
 
     System.out.println(Word);
+
+    
   }
 }
