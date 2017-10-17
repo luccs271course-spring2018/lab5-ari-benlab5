@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ReverseLines {
 
   public static void main(String[] args) {
-    // TODO read successive input lines until EOF, then print out in reverse order
+    // Done read successive input lines until EOF, then print out in reverse order
 
     LinkedStack<String> stack = new LinkedStack<String>();
 
@@ -16,11 +16,11 @@ public class ReverseLines {
       stack.push(line);
     }
 
-    String tempWord = "";
+    String word = "";
     while (!stack.isEmpty()) {
-      tempWord += "\n" + stack.pop();
+       Word += "\n" + stack.pop();
     }
 
-    System.out.println(tempWord);
+    System.out.println(Word);
   }
 }
