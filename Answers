@@ -1,0 +1,13 @@
+Why does LinkedStack not require an explicit constructor? 
+An explicit constructor is not needed in this class because the ADT "LinkedList" has been implemented.
+
+
+What is the time and (extra) space complexity of each of the LinkedStack methods, as well as ReverseLines.main?
+push, peek, pop, isEmpty all equal to O(1) complexity and O(1) space , asList and ReverseLines have O(n) complexity and O(n) space.
+
+How else (not using Node) could we have implemented LinkedStack in such a way that it is still based on a linked 
+list but the asList method uses constant time and space? 
+We can use an array list instead.
+
+Is it better for push and pop to return the item or the stack itself? 
+It is better for push and pop to return the item.
