@@ -19,11 +19,11 @@ public class ReverseLines {
 
     String word = "";
     while (!stack.isEmpty()) {
-       Word += "\n" + stack.pop();
+      word += "\n" + stack.pop();
     }
 
-    System.out.println(Word);
 
-    
+    System.out.println(word);
+
   }
 }
