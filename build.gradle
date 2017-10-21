@@ -39,5 +39,7 @@ tasks.withType(JavaExec) {
 }
 
 googleJavaFormat {
+
     toolVersion = '1.4'
 }
+

@@ -12,8 +12,9 @@ public class LinkedStack<E> implements IStack<E> {
   private int size = 0;
 
   // DONE why don't we need an explicit constructor?
-  // An explicit constructor is not needed in this class because the ADT "LinkedList" has been
-  // implemented
+
+  // An explicit constructor is not needed in this class because the ADT "LinkedList" has been implemented
+
 
   @Override
   public E push(final E obj) {
