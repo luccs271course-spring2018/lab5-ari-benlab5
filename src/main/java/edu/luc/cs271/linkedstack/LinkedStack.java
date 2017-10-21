@@ -19,7 +19,7 @@ public class LinkedStack<E> implements IStack<E> {
   public E push(final E obj) {
     // DONE
     Node<E> temp = top;
-    top = new Node(obj);
+    top = new Node<>(obj);
     // top.obj = obj;
     top.next = temp;
     size++;
